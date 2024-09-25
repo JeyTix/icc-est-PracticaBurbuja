@@ -1,14 +1,20 @@
-import java.util.ArrayList;
-
 public class App {
     public static void main(String[] args) throws Exception {
-        ArrayList lista= new ArrayList<>();
-        lista.add(30);
-        lista.add(12);
-        lista.add(7);
-        lista.add(5);
+        //System.out.println("Hello, World!");
+        Metodos metodosOrdenamiento = new Metodos();
 
-        System.out.println("Lista: "+lista);
+        int[] arreglo = {5, 7, 30, 12, 9};
+        int[] arregloOrdenado = metodosOrdenamiento.sortByBubble(arreglo);
+        metodosOrdenamiento.printArreglo(arregloOrdenado);
+        System.out.print("\n -- -- -- \n");
+        int[] arregloOrdenadoDesendente = metodosOrdenamiento.sortByBubbleDesendente(arreglo);
+        metodosOrdenamiento.printArreglo(arregloOrdenadoDesendente);
 
+        //Ordenar las palabras alfabeticamente de la cadena de texto:
+        String cadena= "este es un ejemplo de texto para Ordenar";
+        String [] palabras= cadena.split(" ");
+        String [] palabrasOrdenadas= metodosOrdenamiento.sortByBubble(palabras);
+
+        metodosOrdenamiento.printArreglo(palabrasOrdenadas);
     }
 }
